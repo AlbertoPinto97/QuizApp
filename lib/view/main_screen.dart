@@ -7,7 +7,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.blueGrey[800],
       body: SafeArea(
         child: Center(
           child: Column(
@@ -15,7 +15,10 @@ class MainScreen extends StatelessWidget {
               children: [
                 const Text(
                   'Quiz App',
-                  style: TextStyle(color: Colors.white, fontSize: 50),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 50,
+                      fontFamily: 'Urbanist'),
                 ),
                 ElevatedButton(
                   child: Container(
@@ -23,9 +26,7 @@ class MainScreen extends StatelessWidget {
                         horizontal: 20, vertical: 10),
                     child: const Text(
                       'Play!',
-                      style: TextStyle(
-                        fontSize: 30,
-                      ),
+                      style: TextStyle(fontSize: 30, fontFamily: 'Urbanist'),
                     ),
                   ),
                   onPressed: () => Navigator.pushNamed(context, '/question'),
